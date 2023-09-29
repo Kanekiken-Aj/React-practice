@@ -1,13 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+// import { a } from 'react-router-dom'
 
 
 export default function Navbar(props) {
   return (
     <nav className={`navbar navbar-expand-lg navbar-${props.mode} bg-${props.mode}`}>
       <div className="container-fluid">
-        {/* <a className="navbar-brand" href="/">TextUtils</a>  */}
+        {/* <a className="navbar-brand" to="/"TextUtils></a>  */}
+        {/* <a className="navbar-brand" to="/">{props.title}</a> */}
+        {/* temporary disabling */}
         <a className="navbar-brand" href="/">{props.title}</a>
+
 
         <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
@@ -17,15 +21,15 @@ export default function Navbar(props) {
             <li className="nav-item">
               <a className="nav-link active" aria-current="page" href="/">Home</a>
             </li> 
-            <li className="nav-item">
-              <a className="nav-link" href="/">{props.about}</a>
-            </li>
+            {/* <li className="nav-item">
+              <a className="nav-a" href="/about">{props.about}</a>
+            </li> */}
           </ul>
           {/* <form className="d-flex" role="search">
             <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search"/>
             <button className="btn btn-outline-success" type="submit">Search</button>
           </form> */}
-          <div className={`form-check form-switch text-${props.mode ==='dark'?'light':'dark'}`}>
+          <div className={`form-check form-switch text-${props.mode ==='light'?'dark':'light'}`}>
           {/* <div className="form-check form-switch text-dark"> */}
 
             <input className="form-check-input" onClick={props.toggleMode} type="checkbox" role="switch" id="flexSwitchCheckDefault"/>
@@ -43,7 +47,7 @@ export default function Navbar(props) {
 Navbar.propTypes = {title: PropTypes.string.isRequired,
                     about :PropTypes.string }   // title ==3 invalid proptype..
 
-// Navbar.defaultProps ={
-//     title: 'Set Title here',
-//     about:'About Text here'
-// };
+Navbar.defaultProps ={
+    title: 'Set Title here',
+    about:'About '
+};
