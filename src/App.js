@@ -38,12 +38,12 @@ function App() {
       setMode('dark')
       document.body.style.backgroundColor = 'black';
       showAlert("Dark mode has been enabled", "success")
-      document.title ='TextUtils - Dark Mode';
+      // document.title ='TextUtils - Dark Mode';
     }else{
       setMode('light')
       document.body.style.backgroundColor = 'white';
       showAlert("Light mode has been enabled", "success")
-      document.title ='TextUtils - Light Mode';
+      // document.title ='TextUtils - Light Mode';
 
     }
   }
@@ -58,7 +58,7 @@ function App() {
             {/* /users --> Component 1 */}
             {/* /user/homes ---> ---> Component 2 */}
 
-            <Route exact path="/about" element={<About/>}> 
+            <Route exact path="/about" element={<About mode={mode}/>}  > 
             </Route>   
             <Route exact path="/" element={<TextForm showAlert={showAlert} heading="Enter the text to analyze"  mode={mode} />}>
               {/* <TextForm showAlert={showAlert} heading="Enter the text to analyze"  mode={mode} /> */}
