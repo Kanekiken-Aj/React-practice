@@ -1,8 +1,4 @@
 {
-<<<<<<< HEAD
-  "homepage": "https://Kanekiken-Aj.github.io/TextUtils-practice",
-=======
->>>>>>> multi-page
   "name": "textutils",
   "version": "0.1.0",
   "private": true,
