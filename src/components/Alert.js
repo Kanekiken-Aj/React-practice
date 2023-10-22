@@ -7,11 +7,11 @@ import React from 'react'
         return lower.charAt(0).toUpperCase() + lower.slice(1);
     }
   return (
-        props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
-            <strong>{capitalize(props.alert.type)}</strong> : {props.alert.msg}
-            
-        </div>
-    
+    <div style={{height: '50px'}}>
+        {props.alert && <div class={`alert alert-${props.alert.type} alert-dismissible fade show`} role="alert">
+                 <strong>{capitalize(props.alert.type)}</strong> : {props.alert.msg}
+            </div>}
+    </div>
   )// Firstly props.alert is evaluated if it is null then below will not run
 }
 
